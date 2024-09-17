@@ -582,7 +582,8 @@ a.back-to-top:hover, a.back-to-top:focus {
 }
 
 .navbar-brand img {
-  width: 75%;
+  width: 25%;
+  height: 20%
   
 }
 
