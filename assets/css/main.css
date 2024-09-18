@@ -2081,6 +2081,60 @@ h1 {
 
 
 
+/* Style for the advisory committee section */
+.advisory-committee-section {
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Style for the advisory box */
+.advisory-box {
+  width: 100%;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Style for each advisory info section */
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.advisory-info {
+  flex: 1;
+  margin: 0 10px;
+  text-align: left;
+}
+
+
+
+.advisory-info p {
+  font-size: 16px;
+  color: #333;
+}
+
+/* Media Query for Mobile View */
+@media (max-width: 768px) {
+  .advisory-box {
+    width: 100%;
+  }
+  .flex-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .advisory-info {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+}
+
+
+
 
 
 
@@ -2313,6 +2367,10 @@ footer {
   border-left: none;
 }
 
+#event-up .event-item .img-fluid{
+  width:300px;
+  height:250px
+}
 /* Pricing Ticket */
 #pricing {
   background: #f8fafa;
