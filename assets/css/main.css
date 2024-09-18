@@ -2001,12 +2001,12 @@ h1 {
 
 
 /* Container for the two boxes and gif */
-#info-section {
+.info-section {
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 20px;
-  background-color: #f7f7f7;
+  
 }
 
 /* Style for each box */
@@ -2063,7 +2063,7 @@ h1 {
 
 /* Media Query for Mobile View */
 @media (max-width: 768px) {
-  #info-section {
+  .info-section {
     flex-direction: column;
     justify-content: center;
   }
