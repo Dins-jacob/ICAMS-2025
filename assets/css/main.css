@@ -98,9 +98,10 @@ ul li, ol li {
 
 .section-title-header p {
   text: center;
-  font-weight: 400;
+  font-weight: bolder;
   line-height: 26px;
   padding-bottom: 0px;
+  color:#0c133f
 }
 
 .section-title {
@@ -115,13 +116,13 @@ ul li, ol li {
 }
 
 .section-title:before {
-  content: "[";
+  /* content: "["; */
   color: #ff4a67;
   padding-right: 10px;
 }
 
 .section-title:after {
-  content: "]";
+  /* content: "]"; */
   color: #ff4a67;
   padding-left: 10px;
 }
@@ -1471,7 +1472,7 @@ h1 {
 .section-title {
   font-size: 32px;
   font-weight: 700;
-  color: #333;
+  color: #c99a24;
 }
 .intro-wrapper {
   display: flex;
