@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:500,700");
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lobster&display=swap');
 html {
   overflow-x: hidden;
 }
@@ -2411,15 +2413,24 @@ footer {
   color: #fff;
 }
 
-#hero-area .contents .head-title {
+/* #hero-area .contents  {
   color: #fff;
   font-size: 48px;
   line-height: 48px;
   text-transform: uppercase;
   font-weight: 700;
   margin-bottom: 22px;
-}
+} */
 
+.head-title{
+  font-family: "Great Vibes", cursive;
+  font-weight: 700;
+  color: #fff;
+  line-height: 48px;
+  font-style: normal;
+  margin-bottom: 22px;
+  font-size:45px;
+}
 #hero-area .contents .banner-desc {
   font-size: 17px;
   font-weight: 400;
