@@ -125,6 +125,7 @@
         </div>
 
     </header>
+    
 
 
     <section id="count">
@@ -335,541 +336,167 @@
     </section>
 
 
-    <section id="schedules" class="schedule section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-title-header text-center">
-                        <h2 class="section-title wow fadeInUp" data-wow-delay="0.2s">Event Schedules</h2>
-                        <p class="wow fadeInDown" data-wow-delay="0.2s">Lorem ipsum dolor sit amet, in quodsi vulputate
-                            pro. Ius illum vocent mediocritatem an <br> cule dicta iriure at phaedrum.</p>
+    <section id="schedules" class="schedule-section">
+        <div class="schedule-container">
+            <div class="schedule-header">
+                <h2 class="schedule-title">Programme Schedule</h2>
+                <p class="schedule-subtitle">09 - 10 January 2025<br>Venue: Golden Jubilee Hall</p>
+            </div>
+            <div class="schedule-tabs">
+                <button class="schedule-tab active" onclick="showScheduleDay(1)">Day 1</button>
+                <button class="schedule-tab" onclick="showScheduleDay(2)">Day 2</button>
+            </div>
+            <div class="schedule-timeline" id="scheduleDay1">
+                <div class="schedule-event">
+                    <div class="schedule-event-time">8:30 AM - 9:00 AM</div>
+                    <div class="schedule-event-content">
+                        <h3>Registration</h3>
+                    </div>
+                </div>
+                <div class="schedule-event">
+                    <div class="schedule-event-time">9:00 AM - 9:45 AM</div>
+                    <div class="schedule-event-content">
+                        <h3>Inaugural Session</h3>
+                    </div>
+                </div>
+                <div class="schedule-event">
+                    <div class="schedule-event-time">9:45 AM - 10:45 AM</div>
+                    <div class="schedule-event-content">
+                        <h3>Plenary Lecture I</h3>
+                        <p>Prof. Ajayan Vinu, University of Newcastle, Australia</p>
+                    </div>
+                </div>
+                <div class="schedule-event">
+                    <div class="schedule-event-time">10:45 AM - 11:00 AM</div>
+                    <div class="schedule-event-content">
+                        <h3>Tea Break</h3>
+                    </div>
+                </div>
+                <div class="schedule-event">
+                    <div class="schedule-event-time">11:00 AM - 11:45 AM</div>
+                    <div class="schedule-event-content">
+                        <h3>Invited Lecture I</h3>
+                        <p>Dr Franklin Gregory, Institute of Plant Genetics PAS, Poznan, Poland</p>
+                    </div>
+                </div>
+                <div class="schedule-event">
+                    <div class="schedule-event-time">11:45 AM - 12:45 PM</div>
+                    <div class="schedule-event-content">
+                        <h3>Invited Lecture II</h3>
+                        <p>Prof. Ha Thanh Tung, Vinh Long University of Technology Education, Vinh Long</p>
+                    </div>
+                </div>
+                <div class="schedule-event">
+                    <div class="schedule-event-time">12:45 PM - 1:30 PM</div>
+                    <div class="schedule-event-content">
+                        <h3>Lunch Break</h3>
+                    </div>
+                </div>
+                <div class="schedule-event">
+                    <div class="schedule-event-time">1:30 PM - 2:30 PM</div>
+                    <div class="schedule-event-content">
+                        <h3>Plenary Lecture II</h3>
+                        <p>Prof. Sabu Thomas, Chairman, TrEST Research Park, Trivandrum</p>
+                    </div>
+                </div>
+                <div class="schedule-event">
+                    <div class="schedule-event-time">2:30 PM - 3:15 PM</div>
+                    <div class="schedule-event-content">
+                        <h3>Keynote Lecture I</h3>
+                        <p>Prof. Reji Philip, RRI Bangalore</p>
+                    </div>
+                </div>
+                <div class="schedule-event">
+                    <div class="schedule-event-time">3:15 PM - 3:30 PM</div>
+                    <div class="schedule-event-content">
+                        <h3>Tea Break</h3>
+                    </div>
+                </div>
+                <div class="schedule-event">
+                    <div class="schedule-event-time">3:30 PM - 4:15 PM</div>
+                    <div class="schedule-event-content">
+                        <h3>Invited Lecture III</h3>
+                        <p>Dr. Radhakrishnan E.K., School of Biosciences (SBS), Mahatma Gandhi University, Kottayam</p>
+                    </div>
+                </div>
+                <div class="schedule-event">
+                    <div class="schedule-event-time">4:15 PM - 5:30 PM</div>
+                    <div class="schedule-event-content">
+                        <h3>Oral Presentation</h3>
+                    </div>
+                </div>
+                <div class="schedule-event">
+                    <div class="schedule-event-time">5:30 PM - 7:30 PM</div>
+                    <div class="schedule-event-content">
+                        <h3>Poster Presentation</h3>
+                    </div>
+                </div>
+                <div class="schedule-event">
+                    <div class="schedule-event-time">7:30 PM</div>
+                    <div class="schedule-event-content">
+                        <h3>Grant Dinner</h3>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-12 mb-5 text-center">
-                    <ul class="nav nav-tabs" id="myTab" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link active" id="monday-tab" data-toggle="tab" href="index.html#monday"
-                                role="tab" aria-controls="monday" aria-expanded="true">
-                                <div class="item-text">
-                                    <h4>Day 01</h4>
-                                    <h5>09 January 2025</h5>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="tuesday-tab" data-toggle="tab" href="index.html#tuesday" role="tab"
-                                aria-controls="tuesday">
-                                <div class="item-text">
-                                    <h4>Day 02</h4>
-                                    <h5>10 January 2020</h5>
-                                </div>
-                            </a>
-                        </li>
-                        <!-- <li class="nav-item">
-                            <a class="nav-link" id="wednesday-tab" data-toggle="tab" href="index.html#wednesday"
-                                role="tab" aria-controls="wednesday">
-                                <div class="item-text">
-                                    <h4>Day 03</h4>
-                                    <h5>16 February 2020</h5>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="thursday-tab" data-toggle="tab" href="index.html#thursday"
-                                role="tab" aria-controls="thursday">
-                                <div class="item-text">
-                                    <h4>Day 04</h4>
-                                    <h5>17 February 2020</h5>
-                                </div>
-                            </a>
-                        </li> -->
-                    </ul>
+            <div class="schedule-timeline" id="scheduleDay2" style="display:none;">
+                <div class="schedule-event">
+                    <div class="schedule-event-time">9:30 AM - 10:30 AM</div>
+                    <div class="schedule-event-content">
+                        <h3>Plenary Lecture III</h3>
+                        <p>Prof. (Dr.) Ayyappanpillai Ajayaghosh, SRM Institute of Science and Technology, Chennai</p>
+                    </div>
                 </div>
-                <div class="col-12">
-                    <div class="schedule-area row wow fadeInDown" data-wow-delay="0.3s">
-                        <div class="schedule-tab-content col-12 clearfix">
-                            <div class="tab-content" id="myTabContent">
-                                <div class="tab-pane fade show active" id="monday" role="tabpanel"
-                                    aria-labelledby="monday-tab">
-                                    <div id="accordion">
-                                        <div class="card">
-                                            <div id="headingOne">
-                                                <div class="schedule-slot-time">
-                                                    <span> 9.30 - 10.30 AM</span>
-                                                    Workshop
-                                                </div>
-                                                <div class="collapsed card-header" data-toggle="collapse"
-                                                    data-target="#collapseOne" aria-expanded="false"
-                                                    aria-controls="collapseOne">
-                                                    <div class="images-box">
-                                                        <img class="img-fluid" src="assets/img/speaker/speakers-1.jpg"
-                                                            alt>
-                                                    </div>
-                                                    <h4>not decided</h4>
-                                                    <h5 class="name">pending</h5>
-                                                </div>
-                                            </div>
-                                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                                                data-parent="#accordion">
-                                                <div class="card-body">
-                                                    <p>not decided</p>
-                                                    <div class="location">
-                                                        <span>Location:</span> not decided
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card">
-                                            <div id="headingTwo">
-                                                <div class="schedule-slot-time">
-                                                    <span> 10.30 - 11.30 AM</span>
-                                                    Workshop
-                                                </div>
-                                                <div class="collapsed card-header" data-toggle="collapse"
-                                                    data-target="#collapseTwo" aria-expanded="false"
-                                                    aria-controls="collapseTwo">
-                                                    <div class="images-box">
-                                                        <img class="img-fluid" src="assets/img/speaker/speakers-2.jpg"
-                                                            alt>
-                                                    </div>
-                                                    <h4>not decided</h4>
-                                                    <h5 class="name">pending</h5>
-                                                </div>
-                                            </div>
-                                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-                                                data-parent="#accordion">
-                                                <div class="card-body">
-                                                    <p>not decided</p>
-                                                    <div class="location">
-                                                        <span>Location:</span> not decided
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card">
-                                            <div id="headingThree">
-                                                <div class="schedule-slot-time">
-                                                    <span> 11.30 - 12.30 AM</span>
-                                                    Workshop
-                                                </div>
-                                                <div class="collapsed card-header" data-toggle="collapse"
-                                                    data-target="#collapseThree" aria-expanded="false"
-                                                    aria-controls="collapseThree">
-                                                    <div class="images-box">
-                                                        <img class="img-fluid" src="assets/img/speaker/speakers-3.jpg"
-                                                            alt>
-                                                    </div>
-                                                    <h4>not decided</h4>
-                                                    <h5 class="name">not decided</h5>
-                                                </div>
-                                            </div>
-                                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
-                                                data-parent="#accordion">
-                                                <div class="card-body">
-                                                    <p>not decided</p>
-                                                    <div class="location">
-                                                        <span>Location:</span> not decided
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade" id="tuesday" role="tabpanel" aria-labelledby="tuesday-tab">
-                                    <div id="accordion2">
-                                        <div class="card">
-                                            <div id="headingOne1">
-                                                <div class="schedule-slot-time">
-                                                    <span> 1.30 - 2.30 AM</span>
-                                                    Workshop
-                                                </div>
-                                                <div class="collapsed card-header" data-toggle="collapse"
-                                                    data-target="#collapseTwo2" aria-expanded="false"
-                                                    aria-controls="collapseTwo2">
-                                                    <div class="images-box">
-                                                        <img class="img-fluid" src="assets/img/speaker/speakers-2.jpg"
-                                                            alt>
-                                                    </div>
-                                                    <h4>Web Design Principles and Best Practices</h4>
-                                                    <h5 class="name">David Warner</h5>
-                                                </div>
-                                            </div>
-                                            <div id="collapseOne1" class="collapse show" aria-labelledby="headingOne1"
-                                                data-parent="#accordion2">
-                                                <div class="card-body">
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
-                                                        minima dolores rerum maiores qui at commodi quas, reprehenderit
-                                                        eius consectetur quae magni molestias veniam, provident illum
-                                                        facere iure libero asperiores! Lorem ipsum dolor sit amet,
-                                                        consectetur adipisicing elit. Veniam earum nihil ex ipsa magni
-                                                        eligendi fugiat assumenda suscipit, accusantium, necessitatibus
-                                                        reiciendis odit sed, vero amet blanditiis?</p>
-                                                    <div class="location">
-                                                        <span>Location:</span> Hall 1 , Building A, Golden Street,
-                                                        Southafrica
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card">
-                                            <div id="headingTwo2">
-                                                <div class="schedule-slot-time">
-                                                    <span> 9.30 - 10.30 AM</span>
-                                                    Workshop
-                                                </div>
-                                                <div class="collapsed card-header" data-toggle="collapse"
-                                                    data-target="#collapseOne1" aria-expanded="false"
-                                                    aria-controls="collapseOne1">
-                                                    <div class="images-box">
-                                                        <img class="img-fluid" src="assets/img/speaker/speakers-1.jpg"
-                                                            alt>
-                                                    </div>
-                                                    <h4>Web Design Principles and Best Practices</h4>
-                                                    <h5 class="name">David Warner</h5>
-                                                </div>
-                                            </div>
-                                            <div id="collapseTwo2" class="collapse" aria-labelledby="headingTwo2"
-                                                data-parent="#accordion2">
-                                                <div class="card-body">
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
-                                                        minima dolores rerum maiores qui at commodi quas, reprehenderit
-                                                        eius consectetur quae magni molestias veniam, provident illum
-                                                        facere iure libero asperiores! Lorem ipsum dolor sit amet,
-                                                        consectetur adipisicing elit. Veniam earum nihil ex ipsa magni
-                                                        eligendi fugiat assumenda suscipit, accusantium, necessitatibus
-                                                        reiciendis odit sed, vero amet blanditiis?</p>
-                                                    <div class="location">
-                                                        <span>Location:</span> Hall 1 , Building A, Golden Street,
-                                                        Southafrica
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade" id="wednesday" role="tabpanel"
-                                    aria-labelledby="wednesday-tab">
-                                    <div id="accordion3">
-                                        <div class="card">
-                                            <div id="headingOne3">
-                                                <div class="schedule-slot-time">
-                                                    <span> 10.30 - 11.30 AM</span>
-                                                    Workshop
-                                                </div>
-                                                <div class="collapsed card-header" data-toggle="collapse"
-                                                    data-target="#collapseOne3" aria-expanded="false"
-                                                    aria-controls="collapseOne3">
-                                                    <div class="images-box">
-                                                        <img class="img-fluid" src="assets/img/speaker/speakers-1.jpg"
-                                                            alt>
-                                                    </div>
-                                                    <h4>Web Design Principles and Best Practices</h4>
-                                                    <h5 class="name">David Warner</h5>
-                                                </div>
-                                            </div>
-                                            <div id="collapseOne3" class="collapse show" aria-labelledby="headingOne3"
-                                                data-parent="#accordion3">
-                                                <div class="card-body">
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
-                                                        minima dolores rerum maiores qui at commodi quas, reprehenderit
-                                                        eius consectetur quae magni molestias veniam, provident illum
-                                                        facere iure libero asperiores! Lorem ipsum dolor sit amet,
-                                                        consectetur adipisicing elit. Veniam earum nihil ex ipsa magni
-                                                        eligendi fugiat assumenda suscipit, accusantium, necessitatibus
-                                                        reiciendis odit sed, vero amet blanditiis?</p>
-                                                    <div class="location">
-                                                        <span>Location:</span> Hall 1 , Building A, Golden Street,
-                                                        Southafrica
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card">
-                                            <div id="headingTwo3">
-                                                <div class="schedule-slot-time">
-                                                    <span> 11.30 - 12.30 AM</span>
-                                                    Workshop
-                                                </div>
-                                                <div class="collapsed card-header" data-toggle="collapse"
-                                                    data-target="#collapseTwo3" aria-expanded="false"
-                                                    aria-controls="collapseTwo3">
-                                                    <div class="images-box">
-                                                        <img class="img-fluid" src="assets/img/speaker/speakers-2.jpg"
-                                                            alt>
-                                                    </div>
-                                                    <h4>Web Design Principles and Best Practices</h4>
-                                                    <h5 class="name">David Warner</h5>
-                                                </div>
-                                            </div>
-                                            <div id="collapseTwo3" class="collapse" aria-labelledby="headingTwo3"
-                                                data-parent="#accordion3">
-                                                <div class="card-body">
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
-                                                        minima dolores rerum maiores qui at commodi quas, reprehenderit
-                                                        eius consectetur quae magni molestias veniam, provident illum
-                                                        facere iure libero asperiores! Lorem ipsum dolor sit amet,
-                                                        consectetur adipisicing elit. Veniam earum nihil ex ipsa magni
-                                                        eligendi fugiat assumenda suscipit, accusantium, necessitatibus
-                                                        reiciendis odit sed, vero amet blanditiis?</p>
-                                                    <div class="location">
-                                                        <span>Location:</span> Hall 1 , Building A, Golden Street,
-                                                        Southafrica
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card">
-                                            <div id="headingThree3">
-                                                <div class="schedule-slot-time">
-                                                    <span> 1.30 - 2.30 AM</span>
-                                                    Workshop
-                                                </div>
-                                                <div class="collapsed card-header" data-toggle="collapse"
-                                                    data-target="#collapseThree3" aria-expanded="false"
-                                                    aria-controls="collapseThree3">
-                                                    <div class="images-box">
-                                                        <img class="img-fluid" src="assets/img/speaker/speakers-3.jpg"
-                                                            alt>
-                                                    </div>
-                                                    <h4>Web Design Principles and Best Practices</h4>
-                                                    <h5 class="name">David Warner</h5>
-                                                </div>
-                                            </div>
-                                            <div id="collapseThree3" class="collapse" aria-labelledby="headingThree3"
-                                                data-parent="#accordion3">
-                                                <div class="card-body">
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
-                                                        minima dolores rerum maiores qui at commodi quas, reprehenderit
-                                                        eius consectetur quae magni molestias veniam, provident illum
-                                                        facere iure libero asperiores! Lorem ipsum dolor sit amet,
-                                                        consectetur adipisicing elit. Veniam earum nihil ex ipsa magni
-                                                        eligendi fugiat assumenda suscipit, accusantium, necessitatibus
-                                                        reiciendis odit sed, vero amet blanditiis?</p>
-                                                    <div class="location">
-                                                        <span>Location:</span> Hall 1 , Building A, Golden Street,
-                                                        Southafrica
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade" id="thursday" role="tabpanel" aria-labelledby="thursday-tab">
-                                    <div id="accordion4">
-                                        <div class="card">
-                                            <div id="headingOne">
-                                                <div class="schedule-slot-time">
-                                                    <span> 9.30 - 10.30 AM</span>
-                                                    Workshop
-                                                </div>
-                                                <div class="collapsed card-header" data-toggle="collapse"
-                                                    data-target="#collapseOne4" aria-expanded="false"
-                                                    aria-controls="collapseOne4">
-                                                    <div class="images-box">
-                                                        <img class="img-fluid" src="assets/img/speaker/speakers-2.jpg"
-                                                            alt>
-                                                    </div>
-                                                    <h4>Web Design Principles and Best Practices</h4>
-                                                    <h5 class="name">David Warner</h5>
-                                                </div>
-                                            </div>
-                                            <div id="collapseOne4" class="collapse show" aria-labelledby="headingOne"
-                                                data-parent="#accordion4">
-                                                <div class="card-body">
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
-                                                        minima dolores rerum maiores qui at commodi quas, reprehenderit
-                                                        eius consectetur quae magni molestias veniam, provident illum
-                                                        facere iure libero asperiores! Lorem ipsum dolor sit amet,
-                                                        consectetur adipisicing elit. Veniam earum nihil ex ipsa magni
-                                                        eligendi fugiat assumenda suscipit, accusantium, necessitatibus
-                                                        reiciendis odit sed, vero amet blanditiis?</p>
-                                                    <div class="location">
-                                                        <span>Location:</span> Hall 1 , Building A, Golden Street,
-                                                        Southafrica
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card">
-                                            <div id="headingTwo">
-                                                <div class="schedule-slot-time">
-                                                    <span> 10.30 - 11.30 AM</span>
-                                                    Workshop
-                                                </div>
-                                                <div class="collapsed card-header" data-toggle="collapse"
-                                                    data-target="#collapseTwo4" aria-expanded="false"
-                                                    aria-controls="collapseTwo4">
-                                                    <div class="images-box">
-                                                        <img class="img-fluid" src="assets/img/speaker/speakers-1.jpg"
-                                                            alt>
-                                                    </div>
-                                                    <h4>Web Design Principles and Best Practices</h4>
-                                                    <h5 class="name">David Warner</h5>
-                                                </div>
-                                            </div>
-                                            <div id="collapseTwo4" class="collapse" aria-labelledby="headingTwo"
-                                                data-parent="#accordion4">
-                                                <div class="card-body">
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
-                                                        minima dolores rerum maiores qui at commodi quas, reprehenderit
-                                                        eius consectetur quae magni molestias veniam, provident illum
-                                                        facere iure libero asperiores! Lorem ipsum dolor sit amet,
-                                                        consectetur adipisicing elit. Veniam earum nihil ex ipsa magni
-                                                        eligendi fugiat assumenda suscipit, accusantium, necessitatibus
-                                                        reiciendis odit sed, vero amet blanditiis?</p>
-                                                    <div class="location">
-                                                        <span>Location:</span> Hall 1 , Building A, Golden Street,
-                                                        Southafrica
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card">
-                                            <div id="headingThree4">
-                                                <div class="schedule-slot-time">
-                                                    <span> 11.30 - 12.30 AM</span>
-                                                    Workshop
-                                                </div>
-                                                <div class="collapsed card-header" data-toggle="collapse"
-                                                    data-target="#collapseThree4" aria-expanded="false"
-                                                    aria-controls="collapseThree4">
-                                                    <div class="images-box">
-                                                        <img class="img-fluid" src="assets/img/speaker/speakers-3.jpg"
-                                                            alt>
-                                                    </div>
-                                                    <h4>Web Design Principles and Best Practices</h4>
-                                                    <h5 class="name">David Warner</h5>
-                                                </div>
-                                            </div>
-                                            <div id="collapseThree4" class="collapse" aria-labelledby="headingThree"
-                                                data-parent="#accordion4">
-                                                <div class="card-body">
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
-                                                        minima dolores rerum maiores qui at commodi quas, reprehenderit
-                                                        eius consectetur quae magni molestias veniam, provident illum
-                                                        facere iure libero asperiores! Lorem ipsum dolor sit amet,
-                                                        consectetur adipisicing elit. Veniam earum nihil ex ipsa magni
-                                                        eligendi fugiat assumenda suscipit, accusantium, necessitatibus
-                                                        reiciendis odit sed, vero amet blanditiis?</p>
-                                                    <div class="location">
-                                                        <span>Location:</span> Hall 1 , Building A, Golden Street,
-                                                        Southafrica
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade" id="friday" role="tabpanel" aria-labelledby="friday-tab">
-                                    <div id="accordion">
-                                        <div class="card">
-                                            <div id="headingOne">
-                                                <div class="schedule-slot-time">
-                                                    <span> 9.30 - 10.30 AM</span>
-                                                    Workshop
-                                                </div>
-                                                <div class="collapsed card-header" data-toggle="collapse"
-                                                    data-target="#collapseTwo" aria-expanded="false"
-                                                    aria-controls="collapseTwo">
-                                                    <div class="images-box">
-                                                        <img class="img-fluid" src="assets/img/speaker/speakers-2.jpg"
-                                                            alt>
-                                                    </div>
-                                                    <h4>Web Design Principles and Best Practices</h4>
-                                                    <h5 class="name">David Warner</h5>
-                                                </div>
-                                            </div>
-                                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                                                data-parent="#accordion">
-                                                <div class="card-body">
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
-                                                        minima dolores rerum maiores qui at commodi quas, reprehenderit
-                                                        eius consectetur quae magni molestias veniam, provident illum
-                                                        facere iure libero asperiores! Lorem ipsum dolor sit amet,
-                                                        consectetur adipisicing elit. Veniam earum nihil ex ipsa magni
-                                                        eligendi fugiat assumenda suscipit, accusantium, necessitatibus
-                                                        reiciendis odit sed, vero amet blanditiis?</p>
-                                                    <div class="location">
-                                                        <span>Location:</span> Hall 1 , Building A, Golden Street,
-                                                        Southafrica
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card">
-                                            <div id="headingTwo">
-                                                <div class="schedule-slot-time">
-                                                    <span> 10.30 - 11.30 AM</span>
-                                                    Workshop
-                                                </div>
-                                                <div class="collapsed card-header" data-toggle="collapse"
-                                                    data-target="#collapseOne" aria-expanded="false"
-                                                    aria-controls="collapseOne">
-                                                    <div class="images-box">
-                                                        <img class="img-fluid" src="assets/img/speaker/speakers-1.jpg"
-                                                            alt>
-                                                    </div>
-                                                    <h4>Web Design Principles and Best Practices</h4>
-                                                    <h5 class="name">David Warner</h5>
-                                                </div>
-                                            </div>
-                                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-                                                data-parent="#accordion">
-                                                <div class="card-body">
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
-                                                        minima dolores rerum maiores qui at commodi quas, reprehenderit
-                                                        eius consectetur quae magni molestias veniam, provident illum
-                                                        facere iure libero asperiores! Lorem ipsum dolor sit amet,
-                                                        consectetur adipisicing elit. Veniam earum nihil ex ipsa magni
-                                                        eligendi fugiat assumenda suscipit, accusantium, necessitatibus
-                                                        reiciendis odit sed, vero amet blanditiis?</p>
-                                                    <div class="location">
-                                                        <span>Location:</span> Hall 1 , Building A, Golden Street,
-                                                        Southafrica
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card">
-                                            <div id="headingThree">
-                                                <div class="schedule-slot-time">
-                                                    <span> 11.30 - 12.30 AM</span>
-                                                    Workshop
-                                                </div>
-                                                <div class="collapsed card-header" data-toggle="collapse"
-                                                    data-target="#collapseThree" aria-expanded="false"
-                                                    aria-controls="collapseThree">
-                                                    <div class="images-box">
-                                                        <img class="img-fluid" src="assets/img/speaker/speakers-3.jpg"
-                                                            alt>
-                                                    </div>
-                                                    <h4>Web Design Principles and Best Practices</h4>
-                                                    <h5 class="name">David Warner</h5>
-                                                </div>
-                                            </div>
-                                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
-                                                data-parent="#accordion">
-                                                <div class="card-body">
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
-                                                        minima dolores rerum maiores qui at commodi quas, reprehenderit
-                                                        eius consectetur quae magni molestias veniam, provident illum
-                                                        facere iure libero asperiores! Lorem ipsum dolor sit amet,
-                                                        consectetur adipisicing elit. Veniam earum nihil ex ipsa magni
-                                                        eligendi fugiat assumenda suscipit, accusantium, necessitatibus
-                                                        reiciendis odit sed, vero amet blanditiis?</p>
-                                                    <div class="location">
-                                                        <span>Location:</span> Hall 1 , Building A, Golden Street,
-                                                        Southafrica
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="schedule-event">
+                    <div class="schedule-event-time">10:30 AM - 11:15 AM</div>
+                    <div class="schedule-event-content">
+                        <h3>Invited Talk IV</h3>
+                        <p>Prof. John Thomas, Centre for NanoBiotechnology, VIT Madras</p>
+                    </div>
+                </div>
+                <div class="schedule-event">
+                    <div class="schedule-event-time">11:15 AM - 11:30 AM</div>
+                    <div class="schedule-event-content">
+                        <h3>Tea Break</h3>
+                    </div>
+                </div>
+                <div class="schedule-event">
+                    <div class="schedule-event-time">11:30 AM - 12:15 PM</div>
+                    <div class="schedule-event-content">
+                        <h3>Invited Lecture V</h3>
+                        <p>Prof. Hendry Izaac Elim, Nanotechnology Research Center and Innovative Creation, Indonesia</p>
+                    </div>
+                </div>
+                <div class="schedule-event">
+                    <div class="schedule-event-time">12:15 PM - 1:00 PM</div>
+                    <div class="schedule-event-content">
+                        <h3>Keynote Talk II</h3>
+                        <p>Prof. Oommen Jacob, Houston university, Texas</p>
+                    </div>
+                </div>
+                <div class="schedule-event">
+                    <div class="schedule-event-time">1:00 PM - 1:45 PM</div>
+                    <div class="schedule-event-content">
+                        <h3>Lunch</h3>
+                    </div>
+                </div>
+                <div class="schedule-event">
+                    <div class="schedule-event-time">1:45 PM - 2:45 PM</div>
+                    <div class="schedule-event-content">
+                        <h3>Invited Lecture VI</h3>
+                        <p>Prof. M. M. Shaijumon, Indian Institute of Science Education & Research Thiruvananthapuram</p>
+                    </div>
+                </div>
+                <div class="schedule-event">
+                    <div class="schedule-event-time">2:45 PM - 4:00 PM</div>
+                    <div class="schedule-event-content">
+                        <h3>Oral Presentation</h3>
+                    </div>
+                </div>
+                <div class="schedule-event">
+                    <div class="schedule-event-time">4:00 PM - 4:30 PM</div>
+                    <div class="schedule-event-content">
+                        <h3>Valedictory Session</h3>
+                        <p>Prof. (Dr.) C.T. Aravindakumar, Vice-Chancellor M.G University Kottayam</p>
                     </div>
                 </div>
             </div>
@@ -1933,6 +1560,14 @@
         initializeClock('clock', deadline);
     </script>
 
+    <script>
+        function showScheduleDay(day) {
+            document.getElementById('scheduleDay1').style.display = day === 1 ? 'block' : 'none';
+            document.getElementById('scheduleDay2').style.display = day === 2 ? 'block' : 'none';
+            document.querySelectorAll('.schedule-tab').forEach(tab => tab.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+        </script>
 
     <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="assets/js/jquery-min.js"></script>
