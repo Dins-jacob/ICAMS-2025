@@ -1173,28 +1173,104 @@ h1 {
 /* Sponsors Area */
 #sponsors {
   background: url(../img/background/countdown.jpg) no-repeat center;
-  background-attachment: scroll;
-  background-size: auto auto;
   background-size: cover;
   background-attachment: fixed;
   position: relative;
-}
-
-#sponsors .section-title-header .section-title {
   color: #fff;
 }
 
-#sponsors .section-title-header p {
-  color: #fff;
+#sponsors .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
 }
 
-#sponsors .sponsors-logo a img {
-  margin: 30px;
+#sponsors .container {
+  position: relative;
+  z-index: 1;
 }
 
-#sponsors .spnsors-logo:hover {
-  border-color: transparent;
-  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2);
+.sponsors-category {
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+}
+
+.sponsors-logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.sponsor-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.sponsor-logo:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-5px);
+}
+
+.sponsor-logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Desktop styles */
+@media (min-width: 992px) {
+  .sponsor-logo {
+      width: 300px;
+      height: 150px;
+  }
+  
+  .sponsor-logo img {
+      max-width: 250px;
+      max-height: 120px;
+  }
+}
+
+/* Tablet styles */
+@media (min-width: 768px) and (max-width: 991px) {
+  .sponsor-logo {
+      width: 250px;
+      height: 125px;
+  }
+  
+  .sponsor-logo img {
+      max-width: 200px;
+      max-height: 100px;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+  .sponsor-logo {
+      width: 200px;
+      height: 100px;
+  }
+  
+  .sponsor-logo img {
+      max-width: 150px;
+      max-height: 80px;
+  }
+  
+  .sponsors-logo-container {
+      gap: 30px;
+  }
+  
+  .sponsors-category {
+      font-size: 1.5rem;
+  }
 }
 
 /* Schedule Area */
