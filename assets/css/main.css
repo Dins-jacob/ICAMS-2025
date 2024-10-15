@@ -1490,6 +1490,212 @@ h1 {
 }
 }
 
+/*Main Button Attraction*/
+main-event-button {
+  margin-top: 30px;
+}
+
+.btn-effect {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  animation: jerk 5s infinite;
+}
+
+.btn-effect:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  animation: none; /* Stop the jerk animation on hover */
+}
+
+.btn-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(255,255,255,0.1), rgba(255,255,255,0.5), rgba(255,255,255,0.1));
+  transform: translateX(-100%);
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes jerk {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-5px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(5px);
+  }
+}
+
+#main-event {
+  background-color: #f8f9fa;
+  padding: 60px 0;
+}
+
+.main-event-content {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.main-event-content h3 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.main-event-content ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.main-event-button {
+  margin-top: 20px !important;
+}
+
+.main-event-content ul li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.main-event-content ul li i {
+  color: #4CAF50;
+  margin-right: 10px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  
+
+  .btn-common {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  @keyframes jerk {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+      transform: translateX(-3px);
+    }
+    20%, 40%, 60%, 80% {
+      transform: translateX(3px);
+    }
+  }
+
+
+  #main-event {
+    padding: 40px 0;
+  }
+
+  .main-event-content {
+    padding: 20px;
+  }
+
+  /* .main-event-button{
+    padding-top: 20px;
+  } */
+
+  .main-event-content h3 {
+    font-size: 20px;
+  }
+
+  .main-event-content ul li {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn-common {
+    padding: 8px 15px;
+    font-size: 12px;
+  }
+
+  .main-event-content h3 {
+    font-size: 18px;
+  }
+
+  .main-event-content ul li {
+    font-size: 13px;
+  }
+
+  @keyframes jerk {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+      transform: translateX(-2px);
+    }
+    20%, 40%, 60%, 80% {
+      transform: translateX(2px);
+    }
+  }
+}
+
+
+/*Tour package mainevent*/
+.tour-packages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.tour-package {
+  flex-basis: calc(50% - 15px);
+  background-color: #FF4D79;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.tour-package:hover {
+  transform: translateY(-5px);
+}
+
+.tour-package h4 {
+  color: #0c133f;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.tour-package p {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.tour-package ul {
+  padding-left: 20px;
+}
+
+.tour-package li {
+  margin-bottom: 5px;
+}
+
+
+
+@media (max-width: 768px) {
+  .tour-package {
+    flex-basis: 100%;
+  }
+}
+
+
+
 /* Inforamation Bar */
 #information-bar {
   background: #fff;
