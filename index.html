@@ -20,6 +20,27 @@
     <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
 
     <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
+
+    <style>
+        .schedule-event {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .schedule-event.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .schedule-event h3 {
+            transition: font-size 0.5s ease;
+        }
+
+        .schedule-event.show h3 {
+            font-size: 1.1em; /* Adjust this value to your preference */
+        }
+    </style>
 </head>
 
 <body>
@@ -42,12 +63,16 @@
                                 Home
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html#about">
+                        <li class="nav-item dropdown" id="aboutNavItem">
+                            <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 About
                             </a>
+                            <div class="dropdown-menu" aria-labelledby="aboutDropdown">
+                                <a class="dropdown-item" href="#about" data-section="about">Conference</a>
+                                <a class="dropdown-item" href="#college" data-section="college">College</a>
+                            </div>
                         </li>
-                        <li class="nav-item active">
+                        <li class="nav-item">
                             <a class="nav-link" href="index.html#intro">
                                 Themes
                             </a>
@@ -68,27 +93,27 @@
                             </a>
                         </li> -->
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html#event-up">
-                                Tour_Spots
+                            <a class="nav-link" href="index.html#event-highlights">
+                                Event_Highlights
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html#pricing">
+                            <a class="nav-link" href="index.html#registration">
                                 Registration
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html#sponsors">
-                                Sponsors
+                            <a class="nav-link" href="index.html#contact-map">
+                                Committee
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html#contact-map">
+                            <a class="nav-link" href="index.html#footer"">
                                 Contact
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="btn btn-common brochure-btn nav-link" href="#" target="_blank">Brochure</a>
+                            <a class="btn btn-common brochure-btn nav-link" href="assets/pdf/ICAMS2025Brochure.pdf" target="_blank">Brochure</a>
                         </li>
                     </ul>
 
@@ -154,41 +179,32 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-12 col-xs-12">
-                    <div class="img-thumb">
-                        <img class="img-fluid" src="assets/img/about/logo1.png" alt>
+                    <div class="img-thumb animate-left">
+                        <img class="img-fluid" src="assets/img/about/logo.jpg" alt="hello">
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-12 col-xs-12">
-                    <div class="about-content">
+                    <div class="about-content animate-right">
                         <div>
                             <div class="about-text">
                                 <h2>About The Conference</h2>
-                                <p>ICAMS-2025 will be one of the immense national events exclusively dedicated to
-                                    advances in Science
-                                    and Technology Research. The conference will be extremely useful in the wisdom of
-                                    interdisciplinary
-                                    gathering that it will be attended by hundreds of physicists, chemists,
-                                    technologists and engineers. The
-                                    goal of the conference is to bring the advanced research on sciences and Technology
-                                    on a knowledge
-                                    platform to facilitate the researchers to interact with a panel of
-                                    highly-accomplished experts in the
-                                    fields. Talks will encompass basic studies, applications and will address topics of
-                                    novel issues. In the
-                                    two-day event, we will listen to recognized personalities in the field as they
-                                    discuss recent advances,
-                                    difficulties, and breakthroughs in the fields.
-                                </p>
                                 <p>
-                                    Keynote address, invited talks, contributory papers poster, oral presentation and an
-                                    exhibition of
-                                    books, equipment and other related materials have been planned. In the conference
-                                    latest
-                                    developments in the proposed fields will be reviewed. The conference is also
-                                    expected to provide a
-                                    platform to share their experiences with the delegates and scientists for future
-                                    collaborations.
+                                    St. Dominic's College Kanjirapally, a beacon of academic excellence in Kerala, 
+                                    invites you to join us for <b>ICAMS-2025</b> <i>(International Conference on Advances 
+                                    in Material Science 2025)</i>, a landmark conference celebrating its 60th anniversary. 
+                                    From nanotechnology to biomaterials, ICAMS-2025 serves as a platform to showcase the 
+                                    latest breakthroughs in material science and offers a unique opportunity to explore the 
+                                    cutting-edge research that is shaping our future. By uniting a diverse community of world's 
+                                    leading material scientists, researchers, scholars, and students from around the globe,
+                                     ICAMS-2025 creates a fertile ground for the exploration of cutting-edge research, 
+                                     the sharing of innovative ideas, and the establishment of lasting partnerships. 
+                                     In addition, the conference features unique and exclusive tours that include 
+                                     the breathtaking hill stations, serene backwaters, and pristine beaches of Kerala - 
+                                     "the God's Own Country". The cultural night and reception showcasing Kerala's distinct culture,
+                                      cuisine, and warmth add to the grandeur of the conference, making it an unparalleled experience.
                                 </p>
+                                
+
                             </div>
 
                             <!-- <a class="btn btn-common" href="index.html#">Learn More</a> -->
@@ -206,7 +222,7 @@
         </video>
     </div>
 
-
+    
     <section id="information-bar">
         <div class="container">
             <div class="row inforation-wrapper">
@@ -241,46 +257,164 @@
     </section>
 
 
+    <section id="college" class="college-section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-xs-12">
+                    <div class="about-content animate-right">
+                        <div>
+                            <div class="about-text">
+                                <h2>About The College</h2>
+                                <p><b>St. Dominic's College, Kanjirapally</b>, run by the Eparchy of Kanjirapally,
+                                     stands tall with its <b><i>60 years of proud legacy</i></b> in the realm of higher education. 
+                                     The verdant campus is ensconced in the serene foothills of the Western Ghats, 
+                                     a UNESCO designated World Heritage site. Many renowned personalities, 
+                                     having left an indelible mark in science, arts, literature, social, and 
+                                     political spheres, both nationally and internationally, are distinguished alumni 
+                                     of this esteemed institution. The college has been ranked among the top 150 Indian 
+                                     colleges by the National Institutional Ranking Framework (NIRF) and all the Science 
+                                     departments are supported by DST-FIST. The college offeres 13 undergraduate and 6 
+                                     postgraduate programs and is situated 40 kms away from Kottayam (KTYM) railway station 
+                                     and 97 kms away from Cochin International airport (COK).
+                                </p>
+                            </div>
+                            <!-- <a class="btn btn-common" href="index.html#">Learn More</a> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 col-xs-12">
+                    <div class="img-thumb animate-left">
+                        <img class="college-img-fluid" src="assets/img/logonavbar.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="counter-section section-padding">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-3 col-md-6 col-xs-12 work-counter-widget">
+                    <div class="counter">
+                        <div class="icon">
+                            <i class="lni-invention"></i>
+                        </div>
+                        <div class="counter-content">
+                            <!-- <div class="counterUp"></div> -->
+                            <p> Groundbreaking Research</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-xs-12 work-counter-widget">
+                    <div class="counter">
+                        <div class="icon">
+                            <i class="lni-world"></i>
+                        </div>
+                        <div class="counter-content">
+                            <!-- <div class="counterUp"></div> -->
+                            <p>Engage with Global Experts</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-xs-12 work-counter-widget">
+                    <div class="counter">
+                        <div class="icon">
+                            <i class="lni-service"></i>
+                        </div>
+                        <div class="counter-content">
+                            <!-- <div class="counterUp"></div> -->
+                            <p>Experience Kerala's Beauty</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-xs-12 work-counter-widget">
+                    <div class="counter">
+                        <div class="icon">
+                            <i class="lni-highlight"></i>
+                        </div>
+                        <div class="counter-content">
+                            <!-- <div class="counterUp"></div> -->
+                            <p>Explore Kerala's Tradition</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <section id="intro" class="intro">
         <div class="container">
             <div class="section-title-header">
-                <h2 class="section-title">Conference Themes</h2>
-                <p>Explore the cutting-edge topics in Material Science</p>
+                <h2 class="section-title">Call for papers</h2>
+                <p>The broad topics to be covered, but not limited to, will be the following:</p>
             </div>
             <div class="intro-wrapper">
-                <!-- <div class="theme-image">
-              <img src="assets/img/theme/theme-1.png" alt="Science Image 1">
-            </div> -->
-                <div class="theme-list-container">
-                    <ul class="theme-list">
-                        <li class="theme-list-column">
-                            <ul>
-                                <li>Physical Science</li>
-                                <li>Nonlinear Optics</li>
-                                <li>Luminescence</li>
-                                <li>Polymer</li>
-                            </ul>
-                        </li>
-                        <li class="theme-list-column">
-                            <ul>
-                                <li>Nanocomposites</li>
-                                <li>Energy Materials</li>
-                                <li>Functional Materials</li>
-                                <li>Synthesis of Organic & Inorganic Compounds</li>
-                            </ul>
-                        </li>
-                        <li class="theme-list-column">
-                            <ul>
-                                <li>Experimental & Theoretical Outcomes on Lasers</li>
-                                <li>Crystal Growth and Applications</li>
-                                <li>Magnetic & Dielectric Materials</li>
-                                <li>Glasses, Thin Films and Ultrasonics</li>
-                            </ul>
-                        </li>
-                    </ul>
+                <div class="intro-part">
+                    <div class="theme-image">
+                        <img src="assets/img/theme/theme-1.png" alt="Science Image 1">
+                    </div>
+                    <div class="theme-list-container">
+                        <ul class="theme-list">
+                            <li class="theme-list-column">
+                                <ul>
+                                    <li>2D-Materials and Nanocomposites</li>
+                                    <li>Advanced and Smart Materials</li>
+                                    <li>Characterization Tools</li>
+                                    <li>Building Materials Engineering</li>
+                                    <li>Material Science Engineering</li>
+                                </ul>
+                            </li>
+                            <li class="theme-list-column">
+                                <ul>
+                                    <li>Computation and Simulations in Material Science</li>
+                                    <li>Crystal Growth and Applications</li>
+                                    <li>Energy Materials</li>
+                                    <li>Energy Storage and Harvesting Materials</li>
+                                    <li>Environmental, Sustainable, and Green Materials</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="theme-image">
-                    <img src="assets/img/theme/theme-1.png" alt="Science Image 2">
+                <div class="intro-part reverse">
+                    <div class="theme-image">
+                        <img src="assets/img/theme/theme-2.png" alt="Science Image 2">
+                    </div>
+                    <div class="theme-list-container">
+                        <ul class="theme-list">
+                            <li class="theme-list-column">
+                                <ul>
+                                    <li>Experimental & Functional Materials</li>
+                                    <li>Glasses, Thin Films and Ultrasonics</li>
+                                    <li>Indian Vision on Material Science</li>
+                                    <li>Inorganic Compounds</li>
+                                    <li>Luminescence</li>
+                                </ul>
+                            </li>
+                            <li class="theme-list-column">
+                                <ul>
+                                    <li>Magnetic & Dielectric Materials</li>
+                                    <li>Materials for Bio-medical Applications</li>
+                                    <li>Nanocomposites</li>
+                                    <li>Nonlinear Optics</li>
+                                    <li>Phytotechnology and Phytochemistry</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section-title-header">
+                    <p>All accepted papers will be published in any one of the following Scopus Indexed conference proceedings. The authors should pay a nominal APC (Article Processing Charge) apart from the registration fee.</p>
+                    <ul style="color:#c99a24">
+                        <li>1. Springer Nature</li>
+                        <li>2. Journal of Physics: Conference Series (Proposal Submitted)</li>
+                        <li>3. AIP Conference Proceedings (Proposal Submitted)</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -309,7 +443,7 @@
                             <i class="lni-bulb"></i>
                         </div>
                         <div class="counter-content">
-                            <div class="counterUp">13</div>
+                            <div class="counterUp">21</div>
                             <p>Advisory Committee</p>
                         </div>
                     </div>
@@ -321,8 +455,8 @@
                             <i class="lni-briefcase"></i>
                         </div>
                         <div class="counter-content">
-                            <div class="counterUp">24</div>
-                            <p>Sponsors</p>
+                            <div class="counterUp">23</div>
+                            <p>Themes</p>
                         </div>
                     </div>
                 </div>
@@ -333,8 +467,8 @@
                             <i class="lni-coffee-cup"></i>
                         </div>
                         <div class="counter-content">
-                            <div class="counterUp">12</div>
-                            <p>Themes</p>
+                            <div class="counterUp">16</div>
+                            <p>Tour Spots</p>
                         </div>
                     </div>
                 </div>
@@ -354,91 +488,91 @@
                 <button class="schedule-tab" onclick="showScheduleDay(2)">Day 2</button>
             </div>
             <div class="schedule-timeline" id="scheduleDay1">
-                <div class="schedule-event">
+                <div class="schedule-event animate-schedule-item">
                     <div class="schedule-event-time">8:30 AM - 9:00 AM</div>
                     <div class="schedule-event-content">
                         <h3>Registration</h3>
                     </div>
                 </div>
-                <div class="schedule-event">
+                <div class="schedule-event animate-schedule-item">
                     <div class="schedule-event-time">9:00 AM - 9:45 AM</div>
                     <div class="schedule-event-content">
                         <h3>Inaugural Session</h3>
                     </div>
                 </div>
-                <div class="schedule-event">
+                <div class="schedule-event animate-schedule-item">
                     <div class="schedule-event-time">9:45 AM - 10:45 AM</div>
                     <div class="schedule-event-content">
                         <h3>Plenary Lecture I</h3>
                         <p>Prof. Ajayan Vinu, University of Newcastle, Australia</p>
                     </div>
                 </div>
-                <div class="schedule-event">
+                <div class="schedule-event animate-schedule-item">
                     <div class="schedule-event-time">10:45 AM - 11:00 AM</div>
                     <div class="schedule-event-content">
                         <h3>Tea Break</h3>
                     </div>
                 </div>
-                <div class="schedule-event">
+                <div class="schedule-event animate-schedule-item">
                     <div class="schedule-event-time">11:00 AM - 11:45 AM</div>
                     <div class="schedule-event-content">
                         <h3>Invited Lecture I</h3>
                         <p>Dr Franklin Gregory, Institute of Plant Genetics PAS, Poznan, Poland</p>
                     </div>
                 </div>
-                <div class="schedule-event">
+                <div class="schedule-event animate-schedule-item">
                     <div class="schedule-event-time">11:45 AM - 12:45 PM</div>
                     <div class="schedule-event-content">
                         <h3>Invited Lecture II</h3>
                         <p>Prof. Ha Thanh Tung, Vinh Long University of Technology Education, Vinh Long</p>
                     </div>
                 </div>
-                <div class="schedule-event">
+                <div class="schedule-event animate-schedule-item">
                     <div class="schedule-event-time">12:45 PM - 1:30 PM</div>
                     <div class="schedule-event-content">
                         <h3>Lunch Break</h3>
                     </div>
                 </div>
-                <div class="schedule-event">
+                <div class="schedule-event animate-schedule-item">
                     <div class="schedule-event-time">1:30 PM - 2:30 PM</div>
                     <div class="schedule-event-content">
                         <h3>Plenary Lecture II</h3>
                         <p>Prof. Sabu Thomas, Chairman, TrEST Research Park, Trivandrum</p>
                     </div>
                 </div>
-                <div class="schedule-event">
+                <div class="schedule-event animate-schedule-item">
                     <div class="schedule-event-time">2:30 PM - 3:15 PM</div>
                     <div class="schedule-event-content">
                         <h3>Keynote Lecture I</h3>
                         <p>Prof. Reji Philip, RRI Bangalore</p>
                     </div>
                 </div>
-                <div class="schedule-event">
+                <div class="schedule-event animate-schedule-item">
                     <div class="schedule-event-time">3:15 PM - 3:30 PM</div>
                     <div class="schedule-event-content">
                         <h3>Tea Break</h3>
                     </div>
                 </div>
-                <div class="schedule-event">
+                <div class="schedule-event animate-schedule-item">
                     <div class="schedule-event-time">3:30 PM - 4:15 PM</div>
                     <div class="schedule-event-content">
                         <h3>Invited Lecture III</h3>
                         <p>Dr. Radhakrishnan E.K., School of Biosciences (SBS), Mahatma Gandhi University, Kottayam</p>
                     </div>
                 </div>
-                <div class="schedule-event">
+                <div class="schedule-event animate-schedule-item">
                     <div class="schedule-event-time">4:15 PM - 5:30 PM</div>
                     <div class="schedule-event-content">
                         <h3>Oral Presentation</h3>
                     </div>
                 </div>
-                <div class="schedule-event">
+                <div class="schedule-event animate-schedule-item">
                     <div class="schedule-event-time">5:30 PM - 7:30 PM</div>
                     <div class="schedule-event-content">
                         <h3>Poster Presentation</h3>
                     </div>
                 </div>
-                <div class="schedule-event">
+                <div class="schedule-event animate-schedule-item">
                     <div class="schedule-event-time">7:30 PM</div>
                     <div class="schedule-event-content">
                         <h3>Grant Dinner</h3>
@@ -446,27 +580,27 @@
                 </div>
             </div>
             <div class="schedule-timeline" id="scheduleDay2" style="display:none;">
-                <div class="schedule-event">
+                <div class="schedule-event animate-schedule-item">
                     <div class="schedule-event-time">9:30 AM - 10:30 AM</div>
                     <div class="schedule-event-content">
                         <h3>Plenary Lecture III</h3>
                         <p>Prof. (Dr.) Ayyappanpillai Ajayaghosh, SRM Institute of Science and Technology, Chennai</p>
                     </div>
                 </div>
-                <div class="schedule-event">
+                <div class="schedule-event animate-schedule-item">
                     <div class="schedule-event-time">10:30 AM - 11:15 AM</div>
                     <div class="schedule-event-content">
                         <h3>Invited Talk IV</h3>
                         <p>Prof. John Thomas, Centre for NanoBiotechnology, VIT Madras</p>
                     </div>
                 </div>
-                <div class="schedule-event">
+                <div class="schedule-event animate-schedule-item">
                     <div class="schedule-event-time">11:15 AM - 11:30 AM</div>
                     <div class="schedule-event-content">
                         <h3>Tea Break</h3>
                     </div>
                 </div>
-                <div class="schedule-event">
+                <div class="schedule-event animate-schedule-item">
                     <div class="schedule-event-time">11:30 AM - 12:15 PM</div>
                     <div class="schedule-event-content">
                         <h3>Invited Lecture V</h3>
@@ -474,20 +608,20 @@
                         </p>
                     </div>
                 </div>
-                <div class="schedule-event">
+                <div class="schedule-event animate-schedule-item">
                     <div class="schedule-event-time">12:15 PM - 1:00 PM</div>
                     <div class="schedule-event-content">
                         <h3>Keynote Talk II</h3>
                         <p>Prof. Oommen Jacob, Houston university, Texas</p>
                     </div>
                 </div>
-                <div class="schedule-event">
+                <div class="schedule-event animate-schedule-item">
                     <div class="schedule-event-time">1:00 PM - 1:45 PM</div>
                     <div class="schedule-event-content">
                         <h3>Lunch</h3>
                     </div>
                 </div>
-                <div class="schedule-event">
+                <div class="schedule-event animate-schedule-item">
                     <div class="schedule-event-time">1:45 PM - 2:45 PM</div>
                     <div class="schedule-event-content">
                         <h3>Invited Lecture VI</h3>
@@ -495,13 +629,13 @@
                         </p>
                     </div>
                 </div>
-                <div class="schedule-event">
+                <div class="schedule-event animate-schedule-item">
                     <div class="schedule-event-time">2:45 PM - 4:00 PM</div>
                     <div class="schedule-event-content">
                         <h3>Oral Presentation</h3>
                     </div>
                 </div>
-                <div class="schedule-event">
+                <div class="schedule-event animate-schedule-item">
                     <div class="schedule-event-time">4:00 PM - 4:30 PM</div>
                     <div class="schedule-event-content">
                         <h3>Valedictory Session</h3>
@@ -911,275 +1045,202 @@
     </section> -->
 
 
-    <section id="event-up" class="section-padding">
+    <section id="event-highlights" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title-header text-center">
+                        <h2 class="section-title wow fadeInUp" data-wow-delay="0.2s">Event Highlights</h2>
+                        <p class="wow fadeInDown" data-wow-delay="0.2s">Experience the best of Kerala culture, cuisine, and landscapes!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="highlight-card wow fadeInLeft" data-wow-delay="0.3s">
+                        <div class="highlight-icon">
+                            <i class="lni-dinner"></i>
+                        </div>
+                        <h3>Culinary Delights</h3>
+                        <p>Experience the culinary delights of Kerala Cuisine! Enjoy a grand reception with a rich blend of traditional Kerala and other cuisines, highlighting local flavours and ingredients to satisfy a variety of palates.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="highlight-card wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="highlight-icon">
+                            <i class="lni-map"></i>
+                        </div>
+                        <h3>Unique Kerala Landscape</h3>
+                        <p>Explore the diverse landscapes of "God's own country" including backwaters, beaches, hill stations and more. Choose from six unique tour packages to experience the beauty of Kerala.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="highlight-card wow fadeInRight" data-wow-delay="0.5s">
+                        <div class="highlight-icon">
+                            <i class="lni-mic"></i>
+                        </div>
+                        <h3>Cultural Night Extravaganza</h3>
+                        <p>The opening day of ICAMS 2025 will conclude with a dazzling cultural evening, blending Kerala's unique artistic and dance traditions in a captivating one-hour performance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    
+    <section id="tour-spots" class="section-padding">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="section-title-header text-center">
                         <h2 class="section-title wow fadeInUp" data-wow-delay="0.2s">Tour Spots</h2>
-                        <!-- <p class="wow fadeInDown" data-wow-delay="0.2s">Lorem ipsum dolor sit amet, in quodsi vulputate
-                            pro. Ius illum vocent mediocritatem an <br> cule dicta iriure at phaedrum.</p> -->
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-3 col-md-6 col-xs-12">
-                    <div class="event-item">
-                        <img class="img-fluid" src="assets/img/event/img1.jpg" alt>
-                        <div class="overlay-text">
-                            <div class="content">
-                                <h3>Kattikkayam Waterfalls </h3>
-                                <a
-                                    href="https://www.google.com/maps/place/Kattikkayam+Waterfalls/@9.7756667,76.8058685,17z/data=!3m1!4b1!4m6!3m5!1s0x3b07c9df0161cb55:0xbecd6740175f0238!8m2!3d9.7756667!4d76.8084434!16s%2Fg%2F11b8_m851s?entry=ttu&g_ep=EgoyMDI0MDkxNS4wIKXMDSoASAFQAw%3D%3D">View
-                                    Location</a>
+                <!-- First Row -->
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="event-item-wrapper">
+                        <div class="event-item wow fadeInUp" data-wow-delay="0.2s">
+                            <img class="img-fluid" src="assets/img/event/img1.jpg" alt="Kattikkayam Waterfalls">
+                            <div class="overlay-text">
+                                <div class="content">
+                                    <h3>Kattikkayam Waterfalls</h3>
+                                    <a href="https://www.google.com/maps/place/Kattikkayam+Waterfalls/@9.7756667,76.8058685,17z/" target="_blank">View Location</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-xs-12">
-                    <div class="event-item">
-                        <img class="img-fluid" src="assets/img/event/img2.jpg" alt>
-                        <div class="overlay-text">
-                            <div class="content">
-                                <h3>Illikkal Kallu </h3>
-                                <a
-                                    href="https://www.google.com/maps/place/Illikkal+Kallu/@9.7531493,76.8185212,17z/data=!3m1!4b1!4m6!3m5!1s0x3b07c9e0dc7c4c9f:0x4e4f616bc1884f31!8m2!3d9.7531493!4d76.8210961!16s%2Fm%2F05f3nx9?entry=ttu&g_ep=EgoyMDI0MDkxNS4wIKXMDSoASAFQAw%3D%3D">View
-                                    Location</a>
+    
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="event-item-wrapper">
+                        <div class="event-item wow fadeInUp" data-wow-delay="0.3s">
+                            <img class="img-fluid" src="assets/img/event/img2.jpg" alt="Illikkal Kallu">
+                            <div class="overlay-text">
+                                <div class="content">
+                                    <h3>Illikkal Kallu</h3>
+                                    <a href="https://www.google.com/maps/place/Illikkal+Kallu/@9.7531493,76.8185212,17z/" target="_blank">View Location</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-xs-12">
-                    <div class="event-item">
-                        <img class="img-fluid" src="assets/img/event/img3.jpg" alt>
-                        <div class="overlay-text">
-                            <div class="content">
-                                <h3>Ilaveezhapoonchira</h3>
-                                <a
-                                    href="https://www.google.com/maps/place/Ilaveezhapoonchira,+Kerala/@9.7954026,76.7858934,16z/data=!3m1!4b1!4m6!3m5!1s0x3b07c85d32117e91:0x267dadfbfcfc55c0!8m2!3d9.79605!4d76.7899135!16s%2Fm%2F0gh5zt7?entry=ttu&g_ep=EgoyMDI0MDkxNS4wIKXMDSoASAFQAw%3D%3D">View
-                                    Location</a>
+    
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="event-item-wrapper">
+                        <div class="event-item wow fadeInUp" data-wow-delay="0.4s">
+                            <img class="img-fluid" src="assets/img/event/img3.jpg" alt="Ilaveezhapoonchira">
+                            <div class="overlay-text">
+                                <div class="content">
+                                    <h3>Ilaveezhapoonchira</h3>
+                                    <a href="https://www.google.com/maps/place/Ilaveezhapoonchira,+Kerala/@9.7954026,76.7858934,16z/" target="_blank">View Location</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-xs-12">
-                    <div class="event-item">
-                        <img class="img-fluid" src="assets/img/event/img4.jpg" alt>
-                        <div class="overlay-text">
-                            <div class="content">
-                                <h3>Kumarakom</h3>
-                                <a
-                                    href="https://www.google.com/maps/place/Kumarakom,+Kerala/@9.610339,76.3565628,12z/data=!3m1!4b1!4m6!3m5!1s0x3b0881caaef0a8f7:0xc23075c3529e921!8m2!3d9.6175449!4d76.430095!16zL20vMDR0Nmo4?entry=ttu&g_ep=EgoyMDI0MDkxNS4wIKXMDSoASAFQAw%3D%3D">View
-                                    Location</a>
+    
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="event-item-wrapper">
+                        <div class="event-item wow fadeInUp" data-wow-delay="0.5s">
+                            <img class="img-fluid" src="assets/img/event/img4.jpg" alt="Kumarakom">
+                            <div class="overlay-text">
+                                <div class="content">
+                                    <h3>Kumarakom</h3>
+                                    <a href="https://www.google.com/maps/place/Kumarakom,+Kerala/@9.610339,76.3565628,12z/" target="_blank">View Location</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
-
-            <div class="row" style="padding-top: 20px;">
-                <div class="col-lg-3 col-md-6 col-xs-12">
-                    <div class="event-item">
-                        <img class="img-fluid" src="assets/img/event/img5.jpg" alt>
-                        <div class="overlay-text">
-                            <div class="content">
-                                <h3>Alappuzha</h3>
-                                <a
-                                    href="https://www.google.com/maps/place/Alappuzha,+Kerala/@9.5010271,76.259703,12z/data=!3m1!4b1!4m6!3m5!1s0x3b0884f1aa296b61:0xb84764552c41f85a!8m2!3d9.4980667!4d76.3388484!16zL20vMGIwOXF5?entry=ttu&g_ep=EgoyMDI0MDkxNS4wIKXMDSoASAFQAw%3D%3D">View
-                                    Location</a>
+    
+            <!-- Second Row -->
+            <div class="row" style="margin-top: 30px;">
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="event-item-wrapper">
+                        <div class="event-item wow fadeInUp" data-wow-delay="0.6s">
+                            <img class="img-fluid" src="assets/img/event/img5.jpg" alt="Alappuzha">
+                            <div class="overlay-text">
+                                <div class="content">
+                                    <h3>Alappuzha</h3>
+                                    <a href="https://www.google.com/maps/place/Alappuzha,+Kerala/@9.5010271,76.259703,12z/" target="_blank">View Location</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-xs-12">
-                    <div class="event-item">
-                        <img class="img-fluid" src="assets/img/event/img6.jpg" alt>
-                        <div class="overlay-text">
-                            <div class="content">
-                                <h3>Kuttikanam</h3>
-                                <a
-                                    href="https://www.google.com/maps/place/Kuttikkanam,+Kerala+685531/@9.578936,76.9620823,15z/data=!3m1!4b1!4m6!3m5!1s0x3b064dcee5c9f1eb:0x194d625f880812e0!8m2!3d9.5782931!4d76.9729472!16s%2Fm%2F027d9s3?entry=ttu&g_ep=EgoyMDI0MDkxNS4wIKXMDSoASAFQAw%3D%3D">View
-                                    Location</a>
+    
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="event-item-wrapper">
+                        <div class="event-item wow fadeInUp" data-wow-delay="0.7s">
+                            <img class="img-fluid" src="assets/img/event/img6.jpg" alt="Kuttikanam">
+                            <div class="overlay-text">
+                                <div class="content">
+                                    <h3>Kuttikanam</h3>
+                                    <a href="https://www.google.com/maps/place/Kuttikkanam,+Kerala+685531/@9.578936,76.9620823,15z/" target="_blank">View Location</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-xs-12">
-                    <div class="event-item">
-                        <img class="img-fluid" src="assets/img/event/img7.jpg" alt>
-                        <div class="overlay-text">
-                            <div class="content">
-                                <h3>Ramakkalmedu</h3>
-                                <a
-                                    href="https://www.google.com/maps/place/Ramakkalmedu,+Kerala/@9.8017384,77.2247487,15z/data=!3m1!4b1!4m6!3m5!1s0x3b0707adf847bb47:0xfcf67c66fc9e8e2!8m2!3d9.7966308!4d77.227138!16s%2Fm%2F03c6zwd?entry=ttu&g_ep=EgoyMDI0MDkxNS4wIKXMDSoASAFQAw%3D%3D">View
-                                    Location</a>
+    
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="event-item-wrapper">
+                        <div class="event-item wow fadeInUp" data-wow-delay="0.8s">
+                            <img class="img-fluid" src="assets/img/event/img7.jpg" alt="Ramakkalmedu">
+                            <div class="overlay-text">
+                                <div class="content">
+                                    <h3>Ramakkalmedu</h3>
+                                    <a href="https://www.google.com/maps/place/Ramakkalmedu,+Kerala/@9.8017384,77.2247487,15z/" target="_blank">View Location</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-xs-12">
-                    <div class="event-item">
-                        <img class="img-fluid" src="assets/img/event/img8.jpg" alt>
-                        <div class="overlay-text">
-                            <div class="content">
-                                <h3>Kadavu Puzha Waterfalls</h3>
-                                <a href="https://www.google.com/maps/place/Kadavupuzha+aruvi+waterfalls/@9.7728737,76.7780397,15z/data=!4m10!1m2!2m1!1sKadavupuzha,+Thottakara+House,+Moonnilavu,+Kerala+686586,+India!3m6!1s0x3b07c9ae2eb64575:0xf869dd7d53a645bf!8m2!3d9.7728737!4d76.7960641!15sCj9LYWRhdnVwdXpoYSwgVGhvdHRha2FyYSBIb3VzZSwgTW9vbm5pbGF2dSwgS2VyYWxhIDY4NjU4NiwgSW5kaWFaPSI7a2FkYXZ1cHV6aGEgdGhvdHRha2FyYSBob3VzZSBtb29ubmlsYXZ1IGtlcmFsYSA2ODY1ODYgaW5kaWGSARJ0b3VyaXN0X2F0dHJhY3Rpb26aASNDaFpEU1VoTk1HOW5TMFZKUTBGblNVTnNaMHQ2ZG1WQkVBReABAA!16s%2Fg%2F11rsr2dmb5?entry=ttu&g_ep=EgoyMDI0MDkxNS4wIKXMDSoASAFQAw%3D%3D"
-                                    target="_blank">View Location</a>
+    
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="event-item-wrapper">
+                        <div class="event-item wow fadeInUp" data-wow-delay="0.9s">
+                            <img class="img-fluid" src="assets/img/event/img8.jpg" alt="Kadavu Puzha Waterfalls">
+                            <div class="overlay-text">
+                                <div class="content">
+                                    <h3>Kadavu Puzha Waterfalls</h3>
+                                    <a href="https://www.google.com/maps/place/Kadavupuzha+aruvi+waterfalls/@9.7728737,76.7780397,15z/" target="_blank">View Location</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
-            <!-- <div class="row mt-5">
-                <div class="col-12 text-center">
-                    <a href="index.html#" class="btn btn-common">More Event</a>
-                </div>
-            </div> -->
         </div>
     </section>
 
-
-    <section id="pricing" class="section-padding">
+    <section id="main-event" class="section-padding"></section>
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="section-title-header text-center">
-                        <h2 class="section-title wow fadeInUp" data-wow-delay="0.2s">Registration</h2>
-                        <!-- <p class="wow fadeInDown" data-wow-delay="0.2s">Lorem ipsum dolor sit amet, in quodsi vulputate
-                            pro. Ius illum vocent mediocritatem an <br> cule dicta iriure at phaedrum.</p> -->
+                        <h2 class="section-title wow fadeInUp" data-wow-delay="0.2s">Tour Packages</h2>
+                        <p class="wow fadeInDown" data-wow-delay="0.2s">Attractive one-day tour packages arranged for January 11, 2025 (Saturday)</p>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-md-6 col-xa-12 mb-3">
-                    <div class="price-block-wrapper wow fadeInRight" data-wow-delay="0.3s">
-                        <div class="colmun-title">
-                            <h5>Payment Category</h5>
-                        </div>
-                        <div class="pricing-list">
-                            <h6>The amount to be paid is based on the following category you fall in</h6>
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th>Category</th>
-                                        <th>Fee</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Students and Research Scholars </td>
-                                        <td>INR 1500/-</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Faculty</td>
-                                        <td>INR 2000/-</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Industry Experts</td>
-                                        <td>INR 3000/-</td>
-                                    </tr>
-                                    <tr>
-                                        <td>International Participants </td>
-                                        <td>USD 50</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-xa-12 mb-3">
-                    <div class="price-block-wrapper active wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="colmun-title">
-                            <h5>Make Payment</h5>
-                        </div>
-                        <div class="pricing-list">
-
-                            <h6>Take the screenshot of the transaction</h6>
-                            <ul>
-                                <li><strong>Step 1:</strong> Participants have to make payment on the given bank
-                                    details:</li>
-                                <li>Bank Name: <strong>INDIAN OVERSEAS BANK</strong></li>
-                                <li>Account Name: <strong>Workshop</strong></li>
-                                <li>A/c No.: <strong>227101000010784</strong></li>
-                                <li>IFSC Code: <strong>IOBA0002271</strong></li>
-                                <li>Branch: <strong>Indian Overseas Bank, Parathode</strong></li>
-
-                            </ul>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-xa-12 mb-3">
-                    <div class="price-block-wrapper wow fadeInRight" data-wow-delay="0.4s">
-                        <div class="colmun-title">
-                            <h5>Abstract Format</h5>
-                        </div>
-                        <div class="pricing-list">
-
-
-                            <ul>
-                                <li><strong>Title: </strong> MS Word in Times New Roman (Size 14 Points) in single
-                                    spacing.</li>
-                                <li><strong>Authors name: </strong> MS Word in Times New Roman (Size 12 Points)</li>
-                                <li><strong>Affiliation: </strong> MS Word in Times New Roman (Size 12 Points)</li>
-                                <li><strong>Abstract: </strong> MS Word in Times New Roman (Size 12 Points) in single
-                                    spacing.</li>
-
-                                <!-- <li ><strong>Step 2:</strong> Fill out the registration form with all the necessary
-                                    information and add the screenshot of the payment details.</li> -->
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="row mt-5"></div>
-            <div class="col-12  text-center ">
-                <ul>
-                    <li style="padding-bottom: 25px;"><strong>Step 2:</strong> Fill out the registration form with all
-                        the necessary
-                        information and add the screenshot of the payment details.</li>
-                </ul>
-                <a href="https://forms.gle/HYUd3jezXuJBofRy7" class="btn btn-common">Register</a>
-            </div>
-        </div>
-
-        </div>
-
-    </section>
-
-    <section id="main-event" class="section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-title-header text-center">
-                        <h2 class="section-title wow fadeInUp" data-wow-delay="0.2s">Main Event Highlight</h2>
-                        <p class="wow fadeInDown" data-wow-delay="0.2s">Attractive one day (11.01.2025, Saturday) tour
-                            package will be arranged as part of our conference.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-8 col-md-12 col-xs-12 mx-auto">
+                <div class="col-lg-10 col-md-12 col-sm-12 mx-auto">
                     <div class="main-event-content wow fadeInUp" data-wow-delay="0.3s">
-                        <h3>Exciting Tour Packages</h3>
-                        <p>Experience the beauty of Kerala with our specially curated tour packages. Choose from a
-                            variety of destinations and activities!</p>
                         <div class="tour-packages">
-                            <div class="tour-package">
-                                <h4><i class="lni-map-marker" styleY></i> Kuttikkanam-Thekkady-Ramakkalmedu</h4>
+                            <div class="tour-package wow fadeInLeft" data-wow-delay="0.4s">
+                                <h4><i class="lni-map-marker"></i> Kuttikkanam-Thekkady-Ramakkalmedu</h4>
                                 <p>5:00 AM - 9:00 PM</p>
                                 <ul>
                                     <li><i class="lni-check-mark-circle"></i> Boating in Thekkady</li>
                                     <li><i class="lni-check-mark-circle"></i> Explore Periyar Wild Forest</li>
                                 </ul>
                             </div>
-                            <div class="tour-package">
+                            <div class="tour-package wow fadeInRight" data-wow-delay="0.5s">
                                 <h4><i class="lni-map-marker"></i> Kuttikkanam-Thekkady-Cumbum-Paruthumpara</h4>
                                 <p>5:00 AM - 9:00 PM</p>
                                 <ul>
@@ -1187,7 +1248,7 @@
                                     <li><i class="lni-check-mark-circle"></i> Visit Periyar Wild Forest</li>
                                 </ul>
                             </div>
-                            <div class="tour-package">
+                            <div class="tour-package wow fadeInLeft" data-wow-delay="0.6s">
                                 <h4><i class="lni-map-marker"></i> Kumarakom-Alappuzha</h4>
                                 <p>7:00 AM - 6:30 PM</p>
                                 <ul>
@@ -1195,7 +1256,7 @@
                                     <li><i class="lni-check-mark-circle"></i> Houseboat experience</li>
                                 </ul>
                             </div>
-                            <div class="tour-package">
+                            <div class="tour-package wow fadeInRight" data-wow-delay="0.7s">
                                 <h4><i class="lni-map-marker"></i> Vagamon</h4>
                                 <p>7:00 AM - 5:00 PM</p>
                                 <ul>
@@ -1203,7 +1264,7 @@
                                     <li><i class="lni-check-mark-circle"></i> Adventure activities</li>
                                 </ul>
                             </div>
-                            <div class="tour-package">
+                            <div class="tour-package wow fadeInLeft" data-wow-delay="0.8s">
                                 <h4><i class="lni-map-marker"></i> Kuttikkanam-Panchalimedu-Paruthumpara</h4>
                                 <p>9:00 AM - 6:30 PM</p>
                                 <ul>
@@ -1211,7 +1272,7 @@
                                     <li><i class="lni-check-mark-circle"></i> Trekking opportunities</li>
                                 </ul>
                             </div>
-                            <div class="tour-package">
+                            <div class="tour-package wow fadeInRight" data-wow-delay="0.9s">
                                 <h4><i class="lni-map-marker"></i> Kattikkayam-Ilaveezhapoonchira-Marmala</h4>
                                 <p>8:00 AM - 6:00 PM</p>
                                 <ul>
@@ -1220,12 +1281,115 @@
                                 </ul>
                             </div>
                         </div>
-                        <a href="#pricing" class="btn btn-common mt-30" style="justify-content: center;">Book Your Tour</a>
+                        
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <section id="registration" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="section-title text-center mb-5">Registration</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="registration-card">
+                        <h3>Registration Fees</h3>
+                        <table class="fee-table">
+                            <thead>
+                                <tr>
+                                    <th>Category</th>
+                                    <th>Fee</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Students and Research Scholars</td>
+                                    <td>INR 1500/-</td>
+                                </tr>
+                                <tr>
+                                    <td>Faculty</td>
+                                    <td>INR 2000/-</td>
+                                </tr>
+                                <tr>
+                                    <td>Industry Experts</td>
+                                    <td>INR 3000/-</td>
+                                </tr>
+                                <tr>
+                                    <td>International Participants</td>
+                                    <td>USD 50</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="note mt-3">*Registration fee doesn't include accommodation charges. Rooms can be availed on shared basis near the campus on an additional payment of Rs. 300/day. Hotels with A/c rooms or suites are also available within close proximity of the campus.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="registration-card">
+                        <h3>Important Dates</h3>
+                        <ul class="date-list">
+                            <li><span>Abstract Submission Deadline:</span> December 25, 2024</li>
+                            <li><span>Full-length Paper Submission Deadline:</span> January 02, 2025</li>
+                            <li><span>Notification of Acceptance:</span> January 05, 2025</li>
+                            <li><span>Registration Deadline:</span> January 8, 2025</li>
+                            <li><span>Conference Dates:</span> January 09-10, 2025</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="registration-card">
+                        <h3>Payment Methods</h3>
+                        <div class="payment-methods">
+                            <div class="qr-code">
+                                <img src="assets/img/qrcode.png" alt="QR Code for Payment">
+                                <p>Scan QR code to pay</p>
+                            </div>
+                            <div class="bank-details">
+                                <h6 style="font-weight: bold; font-size: 22px;">Bank Transfer Details</h6>
+                                <ul>
+                                    <li><span>Bank Name:</span> INDIAN OVERSEAS BANK</li>
+                                    <li><span>Account Name:</span> Workshop</li>
+                                    <li><span>A/c No.:</span> 227101000010784</li>
+                                    <li><span>IFSC Code:</span> IOBA0002271</li>
+                                    <li><span>Branch:</span> Indian Overseas Bank, Parathode</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="registration-card">
+                        <h3>Abstract Format</h3>
+                        <ul class="abstract-format">
+                            <li><span>Title:</span> MS Word in Times New Roman (Size 14 Points) in single spacing.</li>
+                            <li><span>Authors name:</span> MS Word in Times New Roman (Size 12 Points)</li>
+                            <li><span>Affiliation:</span> MS Word in Times New Roman (Size 12 Points)</li>
+                            <li><span>Abstract:</span> MS Word in Times New Roman (Size 12 Points) in single spacing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 mb-4">
+                    <div class="registration-card text-center">
+                        <h3>Complete Registration</h3>
+                        <p>After making the payment, please fill out the registration form with all necessary information and add the screenshot of the payment details.</p>
+                        <a href="https://forms.gle/HYUd3jezXuJBofRy7" class="btn btn-primary btn-lg mt-3" target="_blank">Register Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    
     <!-- <section id="blog" class="section-padding">
         <div class="container">
             <div class="row">
@@ -1370,79 +1534,59 @@
         </div>
     </section>
 
+    
+
 
     <section id="contact-map" class="section-padding">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="section-title-header text-center">
-                        <h2 class="section-title wow fadeInUp" data-wow-delay="0.2s">Contact Us</h2>
+                        <h2 class="section-title wow fadeInUp" data-wow-delay="0.2s">Committee</h2>
                         <!-- <p class="wow fadeInDown" data-wow-delay="0.2s">Lorem ipsum dolor sit amet, in quodsi vulputate
                             pro. Ius illum vocent mediocritatem an <br> cule dicta iriure at phaedrum.</p> -->
 
-                        <div class="info-section">
-                            <!-- First Box: College Logo, Name, and Description -->
-                            <div class="info-box">
-                                <div class="logo">
-                                    <img src="assets/img/navbarlogo.jpg" alt="College Logo">
-                                </div>
-                                <div class="box-title">St. Dominic's College, Kanjirapally</div>
-                                <div class="box-description">
-                                    St. Dominic's College, Kanjirapally, instituted by the great visionaries of the
-                                    Eparchy of Kanjirapally, stands tall with its 60 years of proud legacy in the realm
-                                    of higher education. The verdant campus is ensconced in the serene foothills of the
-                                    Western Ghats, a UNESCO designated World Heritage site. The abundant tapestry of a
-                                    rich academic culture and the contributions of a highly literate community with
-                                    seamless virtues here offers the best backdrop for profound academic engagement and
-                                    insightful research. The college has been ranked among the top 150 Indian colleges
-                                    by the National Institutional Ranking Framework (NIRF) and all the Science
-                                    departments are supported by DST-FIST. The college has 13 undergraduate and 6
-                                    postgraduate programs. The College is situated 40 kms away from Kottayam (KTYM)
-                                    railway station and 100 kms away from Cochin International airport.
+                            <div class="info-section">
+                                <div class="info-box">
+                                    <div class="box-title">Conference Committee</div>
+                                    <div class="committee-grid">
+                                        <div class="committee-item">
+                                            <h6>Chief Patron</h6>
+                                            <p>H.E. Mar Jose Pulickal</p>
+                                            <p>Bishop, Eparchy of Kanjirapally</p>
+                                        </div>
+                                        <div class="committee-item">
+                                            <h6>Patron</h6>
+                                            <p>Rev. Fr. Varghese Parinthirickal</p>
+                                            <p>Manager</p>
+                                        </div>
+                                        <div class="committee-item">
+                                            <h6>Chairman</h6>
+                                            <p>Dr. Seemon Thomas</p>
+                                            <p>Principal</p>
+                                        </div>
+                                        <div class="committee-item">
+                                            <h6>Convenor</h6>
+                                            <p>Dr. Arun Raj R. D.</p>
+                                            <p>Dept. of Botany</p>
+                                        </div>
+                                        <div class="committee-item">
+                                            <h6>Co-ordinators</h6>
+                                            <p>Dr. Rani Alphonsa Jose</p>
+                                            <p>Dept. of Chemistry</p>
+                                            <p>Dr. Jesby George</p>
+                                            <p>Dept. of Physics</p>
+                                        </div>
+                                        <div class="committee-item">
+                                            <h6>Conference Secretaries</h6>
+                                            <p>Dr. Prasanthkumar S.</p>
+                                            <p>Dept. of Botany</p>
+                                            <p>Dr. Jyothi Abraham</p>
+                                            <p>Dept. of Botany</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-
-                            <!-- Middle: Animated GIF -->
-                            <!-- <div class="gif-container">
-                                <img src="assets/img/about/tube.png" alt="Pouring Liquid GIF">
-                            </div> -->
-
-                            <!-- Second Box: Committee and Members -->
-                            <div class="info-box">
-                                <div class="box-title">Conference Committee</div>
-                                <h6 style="font-size: 20px; font-weight:bold; padding-top:10px">Chief Patron</h6>
-                                <ul class="committee-list">
-                                    <li>Mar Jose Pulickal</li>
-                                    <li>Bishop of Kanjirapally Diocese</li>
-                                </ul>
-                                <h6 style="font-size: 20px; font-weight:bold; padding-top:10px">Patron</h6>
-                                <ul class="committee-list">
-                                    <li>Rev. Fr. Vargese Parinthirickal</li>
-                                    <li>Manager</li>
-                                </ul>
-                                <h6 style="font-size: 20px; font-weight:bold; padding-top:10px">Chairman</h6>
-                                <ul class="committee-list">
-                                    <li>Dr. Seemon Thomas</li>
-                                    <li>Principal</li>
-                                </ul>
-                                <h6 style="font-size: 20px; font-weight:bold; padding-top:10px">Convenor</h6>
-                                <ul class="committee-list">
-                                    <li>Dr. Arun Raj R. D</li>
-                                    <li style="font-weight:bold; color:#c99a24">Phn : +919744356244</li>
-                                </ul>
-                                <h6 style="font-size: 20px; font-weight:bold; padding-top:10px">Conference Secretaries
-                                </h6>
-                                <ul class="committee-list">
-                                    <li>Dr. Prasanthkumar S</li>
-                                    <li>Dr. Jyothi Abraham</li>
-                                </ul>
-                                <h6 style="font-size: 20px; font-weight:bold; padding-top:10px">Co-ordinators</h6>
-                                <ul class="committee-list">
-                                    <li>Dr. Rani Alphonsa Jose</li>
-                                    <li>Dr. Jesby George</li>
-                                </ul>
-                            </div>
-                        </div>
 
                         <!-- Advisory Committee Section -->
                         <div class="advisory-committee-section">
@@ -1450,38 +1594,34 @@
                                 <div class="box-title">Advisory Committee</div>
                                 <div class="flex-container">
                                     <div class="advisory-info">
-                                        <p>
                                         <ul>
-                                            <li>Prof. Priya Mahadevan, SN Bose Kolkata</li>
-                                            <li>Prof. K G Suresh, IIT Bombay</li>
-                                            <li> Prof. Kalidas Sen, Central university Hyderabad </li>
-                                            <li> Prof. A Ajithkumar, Texas </li>
-                                            <li> Prof. GP Das, IACS KOLKATA</li>
-                                            <li> Dr. Pavel Dodonov, Federal University of Bahia (UFBA) Brazil </li>
-                                            <li> Prof. G. Vinitha, VIT Vellore KATA</li>
-
+                                            <li>Prof. Priya Mahadevan - SNBNCBS Kolkata</li>
+                                            <li>Prof. K. G. Suresh - IIT Bombay</li>
+                                            <li>Prof. Kalidas Sen - Central university Hyderabad</li>
+                                            <li>Prof. Younan Xia - GIT, China</li>
+                                            <li>Prof. Mohan Jacob - James Cook University Australia</li>
+                                            <li>Prof. A. Ajithkumar - Texas, USA</li>
+                                            <li>Prof. Anastasia Penkova - St. Petersburg State University, Russia</li>
+                                            <li>Prof. G.P. Das - IACS Kolkata</li>
+                                            <li>Dr. Farrukh Abdirasulov - University of Samarkand, Uzbekistan</li>
+                                            <li>Dr. Kishor Kumar Sadasivuni - Qatar University</li>
+                                            <li>Prof. Ayan Datta - IACS Kolkata</li>
                                         </ul>
-                                        </p>
                                     </div>
                                     <div class="advisory-info">
-
-                                        <p>
                                         <ul>
-                                            <li>Prof. Sankaranaryanan, Alagappa university Karikudi</li>
-                                            <li>Dr. Muthusenthil Pandiyan, SSN College of Engineering, Chennai </li>
-                                            <li>Dr. R. Ganapathi Raman, Saveetha Engineering College, Chennai</li>
-                                            <li>Dr. Farrukh Abdirasulov, University of Samarkand, Uzbekistan</li>
-                                            <li>Prof. Ayan Datta, IACS Kolkata </li>
-                                            <li>Prof. Younan Xia, Georgia Institute of Technology, China </li>
-                                            <li>Prof. Mohan Jacob, James Cook University, Australia</li>
-
+                                            <li>Prof. Sankaranaryanan - Alagappa university Karikudi</li>
+                                            <li>Dr. Muthusenthil Pandiyan - SSNCE Chennai</li>
+                                            <li>Dr. R. Ganapathi Raman SEC, Chennai</li>
+                                            <li>Dr. K.V. Adarsh - IISER Bhopal</li>
+                                            <li>Dr. Praveen C.S. - CUSAT, Kochi</li>
+                                            <li>Dr. Raghu Chatanathodi - NIT Calicut</li>
+                                            <li>Dr. Rajesh V. Nair - IIT Ropar</li>
+                                            <li>Dr. Rajeev Kumar - NCCU, Durham, USA</li>
+                                            <li>Dr. Mahagundappa R. Maddani - Mangalore University, Karnataka</li>
+                                            <li>Dr. Bhagyalakshmi M. - Central University, Kerala</li>
                                         </ul>
-                                        </p>
                                     </div>
-                                    <!-- <div class="advisory-info">
-                                        <h6 style="font-size: 18px; font-weight: bold;">Section 3</h6>
-                                        <p>Description for the third section of the advisory committee.</p>
-                                    </div> -->
                                 </div>
                             </div>
                         </div>
@@ -1538,37 +1678,52 @@
         </div>
     </section>
 
-    <footer>
+    <footer id="footer">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-md-12 col-xs-12">
+                    <h2 class="subscribe-title" style="color: aliceblue;padding-top: 20px">Contact Us</h2>
+                    <div class="contact-info" style="padding-top: 20px">
+                        <div class="contact-row">
+                            <div class="contact-person">
+                                <h4>Dr. Arun Raj R. D.</h4>
+                                <p>Convener, ICAMS 2025</p>
+                                <p>Asst. Professor Dept. of Botany</p>
+                                <p>Ph: +91 9744356244</p>
+                            </div>
+                            <div class="contact-person">
+                                <h4>Dr. Rani Alphonsa Jose</h4>
+                                <p>Coordinator, ICAMS 2025</p>
+                                <p>Asst. Professor & Head Dept. of Chemistry</p>
+                                <p>Ph: +91 9633843616</p>
+                            </div>
+                        </div>
+                        <div class="contact-row">
+                            <div class="contact-person">
+                                <h4>Dr. Jesby George</h4>
+                                <p>Coordinator, ICAMS 2025</p>
+                                <p>Asst. Professor Dept. of Physics</p>
+                                <p>Ph: +91 9037462326</p>
+                            </div>
+                            <div class="contact-person">
+                                <h4>Dr. Prasanthkumar S.</h4>
+                                <p>Secretary, ICAMS 2025</p>
+                                <p>Asst. Professor Dept. of Botany</p>
+                                <p>Ph: +91 9746414687</p>
+                            </div>
+                        </div>
+                    </div>
                     <div class="subscribe-inner wow fadeInDown" data-wow-delay="0.3s">
                         <h2 class="subscribe-title">To Get Updates on college</h2>
-                        <!-- <form class="text-center form-inline">
-                            <input class="mb-20 form-control" name="email" placeholder="Enter Your Email Here">
-                            <button type="submit" class="btn btn-common sub-btn" data-style="zoom-in"
-                                data-spinner-size="30" name="submit" id="submit">
-                                <span class="ladda-label"><i class="lni-check-box"></i> Subscribe</span>
-                            </button>
-                        </form> -->
                         <a href="https://www.sdck.in/" class="btn btn-common mt-30 wow fadeInUp"
                             data-wow-delay="0.9s">St. Dominic's College, Kanjirapally</a>
                     </div>
                     <div class="footer-logo">
                         <img style="height:200px; width:100%" src="assets/img/logo-footer.jpg" alt>
                     </div>
-                    <!-- <div class="social-icons-footer">
-                        <ul>
-                            <li class="facebook"><a target="_blank"
-                                    href="https://preview.uideck.com/items/event-up/3"><i
-                                        class="lni-facebook-filled"></i></a></li>
-                            <li class="twitter"><a target="_blank" href="https://preview.uideck.com/items/event-up/3"><i
-                                        class="lni-twitter-filled"></i></a></li>
-                            <li class="pinterest"><a target="_blank"
-                                    href="https://preview.uideck.com/items/event-up/3"><i class="lni-pinterest"></i></a>
-                            </li>
-                        </ul>
-                    </div> -->
+                    
+                    
+                    
                     <div class="site-info">
                         <p>Designed and Developed by <a href="https://www.ajce.in/" rel="nofollow">ajce</a></p>
                     </div>
@@ -1668,6 +1823,9 @@
             document.getElementById('scheduleDay2').style.display = day === 2 ? 'block' : 'none';
             document.querySelectorAll('.schedule-tab').forEach(tab => tab.classList.remove('active'));
             event.target.classList.add('active');
+            
+            // Trigger animation when switching days
+            animateSchedule();
         }
     </script>
 
@@ -1680,6 +1838,99 @@
             targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
         });
     </script>
+
+    <script>
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      };
+    
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+    
+      document.querySelectorAll('.animate-left, .animate-right').forEach(el => {
+        observer.observe(el);
+      });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const aboutNavItem = document.getElementById('aboutNavItem');
+            const aboutSection = document.getElementById('about');
+            const collegeSection = document.getElementById('college');
+            const dropdownItems = document.querySelectorAll('#aboutNavItem .dropdown-item');
+        
+            function checkAboutSections() {
+                const aboutRect = aboutSection.getBoundingClientRect();
+                const collegeRect = collegeSection.getBoundingClientRect();
+                const windowHeight = window.innerHeight;
+        
+                if (
+                    (aboutRect.top <= windowHeight && aboutRect.bottom >= 0) ||
+                    (collegeRect.top <= windowHeight && collegeRect.bottom >= 0)
+                ) {
+                    aboutNavItem.classList.add('active');
+                } else {
+                    aboutNavItem.classList.remove('active');
+                }
+            }
+        
+            window.addEventListener('scroll', checkAboutSections);
+            checkAboutSections(); // Check initially
+        
+            // Handle dropdown item clicks
+            dropdownItems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    // Smooth scroll to the target section
+                    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    
+                    // Close the dropdown menu
+                    const dropdownToggle = document.querySelector('#aboutDropdown');
+                    $(dropdownToggle).dropdown('toggle');
+                });
+            });
+        });
+        </script>
+
+        <script>
+            function animateSchedule() {
+                const scheduleItems = document.querySelectorAll('.animate-schedule-item');
+                const triggerBottom = window.innerHeight * 0.8;
+        
+                scheduleItems.forEach(item => {
+                    const itemTop = item.getBoundingClientRect().top;
+        
+                    if (itemTop < triggerBottom) {
+                        item.classList.add('show');
+                    } else {
+                        item.classList.remove('show');
+                    }
+                });
+            }
+        
+            window.addEventListener('scroll', animateSchedule);
+            window.addEventListener('load', animateSchedule);
+        
+            // Existing showScheduleDay function
+            function showScheduleDay(day) {
+                document.getElementById('scheduleDay1').style.display = day === 1 ? 'block' : 'none';
+                document.getElementById('scheduleDay2').style.display = day === 2 ? 'block' : 'none';
+                
+                // Trigger animation when switching days
+                animateSchedule();
+            }
+        </script>
 
     <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="assets/js/jquery-min.js"></script>
