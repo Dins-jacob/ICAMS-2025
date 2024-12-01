@@ -1539,7 +1539,7 @@ h1 {
 }
 
 .sponsor-logo:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: whitesmoke;
   transform: translateY(-5px);
 }
 
@@ -1548,40 +1548,31 @@ h1 {
   height: auto;
 }
 
-.journal-partner-container {
+.journal-partners-container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin-top: 2rem;
+  gap: 40px;
+  margin-top: 20px;
 }
 
 .journal-partner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   text-align: center;
-  max-width: 600px;
-  text-decoration: none;
-  color: inherit;
-  transition: transform 0.3s ease;
+  
 }
 
-.journal-partner:hover {
-  transform: scale(1.05);
+.journal-partner h5 {
+  margin-bottom: 15px;
+  color: #004aba;
 }
 
 .journal-partner img {
   max-width: 200px;
   height: auto;
-  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
 }
 
-.journal-partner-description {
-  padding: 0 1rem;
-}
-
-.journal-partner-description h4 {
-  margin-bottom: 0.5rem;
+.journal-partner img:hover {
+  transform: scale(1.05);
 }
 
 @media (max-width: 768px) {
@@ -1824,195 +1815,6 @@ h1 {
     font-size: 0.8em;
   }
 }
-
-/* Main Button Attraction
-main-event-button {
-  margin-top: 30px;
-}
-
-.btn-effect {
-  position: relative;
-  overflow: hidden;
-  transition: all 0.3s ease;
-  animation: jerk 5s infinite;
-}
-
-.btn-effect:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  animation: none; */
-  /* Stop the jerk animation on hover
-}
-
-.btn-animation {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));
-  transform: translateX(-100%);
-  animation: shimmer 3s infinite;
-}
-
-@keyframes shimmer {
-  100% {
-    transform: translateX(100%);
-  }
-}
-
-@keyframes jerk {
-
-  0%,
-  100% {
-    transform: translateX(0);
-  }
-
-  10%,
-  30%,
-  50%,
-  70%,
-  90% {
-    transform: translateX(-5px);
-  }
-
-  20%,
-  40%,
-  60%,
-  80% {
-    transform: translateX(5px);
-  }
-}
-
-#main-event {
-  background-color: #f8f9fa;
-  padding: 60px 0;
-}
-
-.main-event-content {
-  background-color: #ffffff;
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.main-event-content h3 {
-  color: #333;
-  margin-bottom: 20px;
-  font-size: 24px;
-}
-
-.main-event-content ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-.main-event-button {
-  margin-top: 20px !important;
-}
-
-.main-event-content ul li {
-  margin-bottom: 10px;
-  font-size: 16px;
-}
-
-.main-event-content ul li i {
-  color: #4CAF50;
-  margin-right: 10px;
-}
-
-/* Media Queries for Responsiveness */
-/* @media (max-width: 768px) {
-
-
-  .btn-common {
-    padding: 10px 20px;
-    font-size: 14px;
-  }
-
-  @keyframes jerk {
-
-    0%,
-    100% {
-      transform: translateX(0);
-    }
-
-    10%,
-    30%,
-    50%,
-    70%,
-    90% {
-      transform: translateX(-3px);
-    }
-
-    20%,
-    40%,
-    60%,
-    80% {
-      transform: translateX(3px);
-    }
-  }
-
-
-  #main-event {
-    padding: 40px 0;
-  }
-
-  .main-event-content {
-    padding: 20px;
-  } */
-
-  /* .main-event-button{
-    padding-top: 20px;
-  } */
-
-  /* .main-event-content h3 {
-    font-size: 20px;
-  }
-
-  .main-event-content ul li {
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 480px) {
-  .btn-common {
-    padding: 8px 15px;
-    font-size: 12px;
-  }
-
-  .main-event-content h3 {
-    font-size: 18px;
-  }
-
-  .main-event-content ul li {
-    font-size: 13px;
-  }
-
-  @keyframes jerk {
-
-    0%,
-    100% {
-      transform: translateX(0);
-    }
-
-    10%,
-    30%,
-    50%,
-    70%,
-    90% {
-      transform: translateX(-2px);
-    }
-
-    20%,
-    40%,
-    60%,
-    80% {
-      transform: translateX(2px);
-    }
-  }
-} */
-
 
 /*Tour package mainevent*/
 .tour-packages {
@@ -2872,6 +2674,7 @@ main-event-button {
 
 
 
+
 /* Footer Area Start */
 footer {
   background: #161E26;
@@ -3379,15 +3182,6 @@ footer {
   color: #fff;
 }
 
-/* #hero-area .contents  {
-  color: #fff;
-  font-size: 48px;
-  line-height: 48px;
-  text-transform: uppercase;
-  font-weight: 700;
-  margin-bottom: 22px;
-} */
-
 .head-title {
   font-family: "Great Vibes", cursive;
   font-weight: 700;
@@ -3512,4 +3306,112 @@ footer {
   .contact-person p {
       font-size: 14px;
   }
+}
+
+/* Publication Section Styles */
+#publications {
+    background: #f8f9fa;
+}
+
+.publication-card {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.publication-card:hover {
+    transform: translateY(-5px);
+}
+
+.publication-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.publication-header i {
+    font-size: 48px;
+    color: #c99a24;
+    margin-bottom: 15px;
+}
+
+.publication-header h3 {
+    color: #333;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.publication-content p {
+    color: #666;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.publication-list {
+    list-style: none;
+    padding: 0;
+}
+
+.publication-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.publication-list li:hover {
+    background: #fff;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+    transform: translateX(10px);
+}
+
+.journal-number {
+    background: #c99a24;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.journal-info {
+    flex: 1;
+}
+
+.journal-info h4 {
+    color: #333;
+    margin: 0 0 5px 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.journal-info p {
+    color: #666;
+    margin: 0;
+    font-size: 14px;
+    text-align: left;
+}
+
+/* Animation for the items */
+.wow.fadeInLeft {
+    animation-duration: 1s;
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
